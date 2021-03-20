@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Пример подключения плеера</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
+
+  <!--Favicon section begin-->
+  <link rel="shortcut icon" href="static/favicon/favicon.ico">
+  <meta name="msapplication-config" content="static/favicon/browserconfig.xml">
+  <link rel="icon" type="image/png" href="static/favicon/android-chrome-144x144.png" sizes="144x144">
+  <link rel="apple-touch-icon" sizes="152x152" href="static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!--Favicon section end-->
+
+
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      height: 600px;
+      width: 800px;
+    }
+    
+    .player-control-button {
+      border-style: none;
+      background-color: transparent;
+      height: 43px;
+      width: 38px;
+    }
+
+    .player {
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 800px;
+      height: 600px;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .player-button-stripe {
+      background-color:black;
+      display: flex;
+      flex-direction: row;
+      float: left;
+    }
+
+    .player-inner-button {
+      color: white;
+      font-size: large;
+      line-height: 1.5;
+      padding-right: 10px;
+    }
+
+    .player-button-divider {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .fa-arrows-alt {
+      content: "\f061";
+      margin-left: 6px;
+      margin-top: 4px;
+      margin-bottom: 0px;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="player" id="player">
+    <div class="js-video-container video-container"></div>
+    <div class="player-button-stripe">
+      <button class="js-play-button player-control-button player-inner-button">
+        <i class="fa fa-play"></i>
+      </button>
+      <button class="js-pause-button player-control-button player-inner-button" hidden>
+        <i class="fa fa-pause"></i>
+      </button>
+      <button class="js-volume-button player-control-button player-inner-button">
+        <i class="fa fa-volume-off"></i>
+      </button>
+      <button class="js-mute-button player-control-button player-inner-button">
+        <i class="fa fa-volume-up"></i>
+      </button>
+      <div class="player-button-divider"></div>
+      <button class="js-fullscreen-button player-control-button player-inner-button">
+        <i class="fa fa-arrows-alt"></i>
+      </button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+  <script src="player.js"></script>
+  <script>
+    createPlayer({elementId: 'player'});
+  </script>
+  <script src="https://use.fontawesome.com/7cedd502d9.js"></script>
+
+</body>
+</html>
