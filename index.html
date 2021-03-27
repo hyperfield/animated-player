@@ -4,6 +4,8 @@
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 
   <!--Favicon section begin-->
   <link rel="shortcut icon" href="static/favicon/favicon.ico">
@@ -54,7 +56,7 @@
     }
 
     .player-button-stripe {
-      background-color:black;
+      background-color: black;
       display: flex;
       flex-direction: row;
       float: left;
@@ -79,28 +81,44 @@
       margin-bottom: 0px;
       margin-right: 6px;
     }
+
+    .time-digits {
+      font-family: 'Roboto';
+      font-size: 16px;
+      font-style: regular;
+      font-weight: 400;
+    }
   </style>
 </head>
 <body>
   <div class="player" id="player">
     <div class="js-video-container video-container"></div>
-    <div class="player-button-stripe">
-      <button class="js-play-button player-control-button player-inner-button">
-        <i class="fa fa-play"></i>
-      </button>
-      <button class="js-pause-button player-control-button player-inner-button" hidden>
-        <i class="fa fa-pause"></i>
-      </button>
-      <button class="js-volume-button player-control-button player-inner-button">
-        <i class="fa fa-volume-off"></i>
-      </button>
-      <button class="js-mute-button player-control-button player-inner-button">
-        <i class="fa fa-volume-up"></i>
-      </button>
-      <div class="player-button-divider"></div>
-      <button class="js-fullscreen-button player-control-button player-inner-button">
-        <i class="fa fa-arrows-alt"></i>
-      </button>
+      <div class="player-button-stripe">
+        <button class="js-play-button player-control-button player-inner-button">
+          <i class="fa fa-play"></i>
+        </button>
+        <button class="js-pause-button player-control-button player-inner-button" hidden>
+          <i class="fa fa-pause"></i>
+        </button>
+        <button class="js-volume-button player-control-button player-inner-button">
+          <i class="fa fa-volume-off"></i>
+        </button>
+        <button class="js-mute-button player-control-button player-inner-button" style="margin-right: -2px;">
+          <i class="fa fa-volume-up"></i>
+        </button>
+        <div style="color: white; padding-top: 12px;">
+          <span class="js-current-time time-digits"></span>
+          <span class="player-button-divider"></span>
+        </div>
+        <div class="player-button-divider"></div>
+          <div style="color: white; padding-top: 12px;">
+            <span class="js-duration time-digits"></span>
+          </div>
+          <button class="js-fullscreen-button player-control-button player-inner-button">
+            <i class="fa fa-arrows-alt"></i>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
