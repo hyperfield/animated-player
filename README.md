@@ -7,8 +7,6 @@ The purpose is to demonstrate some of the capabilities of the JS library whose c
 Video Player can be seen in action at [here](https://hyperfield.github.io/animated-player/).
 <br/><br/>
 
-![What the player looks like](player-screenshot.png)
-
 ## Installing and launching the player
 
 There is no need to install the player. All that needs to be done is just to open the file `index.html` in your favourite Web browser. You need to make sure that JavaScript is enabled in your browser.
