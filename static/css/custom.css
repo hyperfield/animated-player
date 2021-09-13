@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 600px;
+    width: 800px;
+}
+
+.dot {
+    margin-top: -4px;
+    margin-left: -8px;
+    height: 8px;
+    width: 8px;
+    background-color: red;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 .4em black;
+    display: inline-block;
+    opacity: 0;
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;
+    transition-property: opacity;
+}
+
+.player-control-button {
+    border-style: none;
+    background-color: transparent;
+    height: 43px;
+    width: 38px;
+}
+
+.player {
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 800px;
+    height: 600px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.player-button-stripe {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+.player-inner-button {
+    color: white;
+    font-size: large;
+    line-height: 1.5;
+    padding-right: 10px;
+}
+
+.js-progress {
+    display: flex;
+    align-self: center;
+    height: 5px;
+    margin-left: 11px;
+    margin-right: 11px;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: grey;
+}
+
+.js-progress:hover .dot {
+    opacity: 1;
+    transition-timing-function: ease-in;
+    transition-duration: 300ms;
+    transition-property: opacity;
+}
+
+.js-progress-slider {
+    background-color: red;
+}
+
+.fa-arrows-alt {
+    content: "\f061";
+    margin-left: 6px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-right: 6px;
+}
+
+.time-digits {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: regular;
+    font-weight: 400;
+}
+
+.tool-bar-elem {
+    color: white;
+    padding-top: 12px;
+}

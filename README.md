@@ -18,7 +18,6 @@ The script in `player.js` currently embeds an external video file, which will be
 ## Frequently Asked Questions (FAQ)
 
 Q: Why is this player useful?
-
 A: It is easy to implement, it is easily customizable, and it is very light-weight. The player has all the necessary functionality.
 
 Q: Does this JavaScript script use any external services to function?  
