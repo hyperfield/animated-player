@@ -4,7 +4,7 @@ This is a video player embedded in a Web page in your browser and is based on a 
 
 The purpose is to demonstrate some of the capabilities of the JS library whose code can be found in the included file `player.js`.
 
-Video Player can be seen in action at https://hyperfield.github.io/video-player/
+Video Player can be seen in action at [here](https://hyperfield.github.io/animated-player/).
 <br/><br/>
 
 ![What the player looks like](player-screenshot.png)
